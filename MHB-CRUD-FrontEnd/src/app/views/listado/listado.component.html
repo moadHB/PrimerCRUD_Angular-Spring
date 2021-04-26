@@ -1,0 +1,11 @@
+
+    <div id="buttons">
+      <input type="button" name="addUser" (click)="aniadir()" value="Añadir Usuario">
+      <p>Modifica las personas en tiempo real.</p>
+    </div>
+    <app-entrada [entradas]="listadoEntradas" (usuarioSeleccionado)="actualizar($event)" (usuarioEliminado)="eliminar($event)">
+
+    </app-entrada>
+
+
+

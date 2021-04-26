@@ -1,0 +1,19 @@
+#buttons{
+  width: fit-content;
+  padding: 30px;
+}
+#buttons input{
+  background-color: #62BB39;
+  padding: 10px;
+  size: 10em;
+  float: left;
+  size: 3em;
+  margin: 15px 0;
+}
+p{
+  color: #E2E4E4;
+  float:right;
+  font-size: x-large;
+  text-align: center;
+  margin-left: 30px;
+}

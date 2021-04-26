@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  background-color: #192824 ;
+  width: 90%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+*{
+  box-sizing: border-box;
+}
+#content{
+  width: 75%;
+  margin: auto;
+
+}
