@@ -17,6 +17,8 @@ export class EntradaComponent implements OnInit {
   usuarioSeleccionado: EventEmitter<any>;
   @Output()
   usuarioEliminado: EventEmitter<any>;
+  @Output()
+  usuarioNuevo: EventEmitter<any>;
 
   usuario: Entrada[];
 
@@ -36,6 +38,10 @@ export class EntradaComponent implements OnInit {
     this.usuarioEliminado.emit(id);
   }
 
+  onUsuarioNuevo() {
+    this.usuarioEliminado.emit();
+  }
+
   constructor() {
     this.entrada = {
       lastName: "",
@@ -46,6 +52,7 @@ export class EntradaComponent implements OnInit {
     }
     this.usuarioSeleccionado = new EventEmitter<any>();
     this.usuarioEliminado = new EventEmitter<any>();
+    this.usuarioNuevo = new EventEmitter<any>();
     this.usuario=[];
   }
 

@@ -3,7 +3,7 @@
       <input type="button" name="addUser" (click)="aniadir()" value="Añadir Usuario"><br><br>
       <h3>Modifica las personas en tiempo real.</h3>
     </div>
-    <app-entrada [entradas]="listadoEntradas" (usuarioSeleccionado)="actualizar($event)" (usuarioEliminado)="eliminar($event)">
+    <app-entrada [entradas]="listadoEntradas" (usuarioSeleccionado)="actualizar($event)" (usuarioEliminado)="eliminar($event)" (usuarioNuevo)="aniadir()">
 
     </app-entrada>
 
