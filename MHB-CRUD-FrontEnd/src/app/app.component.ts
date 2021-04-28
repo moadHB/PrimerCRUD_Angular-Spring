@@ -21,7 +21,7 @@ export class AppComponent {
     if (this.i < this.txt.length) {
       this.titulo += this.txt.charAt(this.i);
       this.i++;
-      setTimeout(()=>this.typeWriter(),100);
+      setTimeout(()=>this.typeWriter(),50);
     }
 
   }

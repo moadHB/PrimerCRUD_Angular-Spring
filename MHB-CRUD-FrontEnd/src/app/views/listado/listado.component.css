@@ -1,19 +1,24 @@
 #buttons{
   width: fit-content;
   padding: 30px;
+  max-width: 700px;
+  margin: auto;
 }
 #buttons input{
-  background-color: #62BB39;
+  background-color: lightgreen;
   padding: 10px;
-  size: 10em;
-  float: left;
   size: 3em;
-  margin: 15px 0;
+  margin: 10px 25px;
+  border-radius: 10px;
+  align-self: center;
 }
-p{
-  color: #E2E4E4;
-  float:right;
+#buttons input:hover{
+  box-shadow: 0 0 1px 1px  lightseagreen ;
+}
+
+h3{
+  color:blueviolet;
   font-size: x-large;
   text-align: center;
-  margin-left: 30px;
+  margin-left: 25px;
 }

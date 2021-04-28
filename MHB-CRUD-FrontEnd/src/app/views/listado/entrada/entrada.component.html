@@ -1,26 +1,30 @@
-<div id="entrada" *ngFor="let entrada of entradas">
-  <div class="card">
-    <div id="card-form">
-      <form action=""  method="post" >
-        <button class="boton" name="eliminar{{entrada.id}}"  (click)="onUsuarioEliminado(entrada.id)">X</button>
-        <label  for="nombre"><br>
-          Nombre: <br>
-          <input type="text" name="nombre{{entrada.id}}" value="{{(entrada.name!=null)?entrada.name:''}}"  (blur)="onUsuarioSeleccionado(entrada.id)" [(ngModel)]="usuario[entrada.id].name"><br>
-        </label >
-        <label  for="apellido{{entrada.id}}">
-          Apellidos: <br>
-          <input type="text" name="apellido{{entrada.id}}" value="{{(entrada.lastName!=null)?entrada.lastName:''}}" (blur)="onUsuarioSeleccionado(entrada.id)" [(ngModel)]="usuario[entrada.id].lastName"><br>
-        </label >
-        <label  for="ciudad{{entrada.id}}">
-          Ciudad: <br>
-          <input type="text" name="ciudad{{entrada.id}}" value="{{(entrada.city!=null)?entrada.city:''}}" (blur)="onUsuarioSeleccionado(entrada.id)" [(ngModel)]="usuario[entrada.id].city"><br>
-        </label >
-        <label  for="edad{{entrada.id}}">
-          Edad: <br>
-          <input type="number" name="edad{{entrada.id}}" value="{{(entrada.age!=null)?entrada.age:''}}" (blur)="onUsuarioSeleccionado(entrada.id)" [(ngModel)]="usuario[entrada.id].age"></label ><br>
-          <input type="number" name="{{entrada.id}}" [(ngModel)]="usuario[entrada.id].id" value="{{entrada.id}}" hidden>
-      </form>
-    </div>
-  </div>
-</div>
+<div class="container">
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">Nombre</div>
+      <div class="col col-3">Apellidos</div>
+      <div class="col col-3">City</div>
+      <div class="col col-4">Edad</div>
+      <div class="col col-5"></div>
+    </li>
+    <li class="table-row" *ngFor="let entrada of entradas">
+      <div class="col col-1" data-label="Nombre">
+        <input type="text" name="nombre{{entrada.id}}" value="{{(entrada.name!=null)?entrada.name:''}}"  (blur)="onUsuarioSeleccionado(entrada.id)" [(ngModel)]="usuario[entrada.id].name">
+      </div>
+      <div class="col col-2" data-label="Apellidos">
+        <input type="text" name="apellido{{entrada.id}}" value="{{(entrada.lastName!=null)?entrada.lastName:''}}" (blur)="onUsuarioSeleccionado(entrada.id)" [(ngModel)]="usuario[entrada.id].lastName">
+      </div>
+      <div class="col col-3" data-label="City">
+        <input type="text" name="ciudad{{entrada.id}}" value="{{(entrada.city!=null)?entrada.city:''}}" (blur)="onUsuarioSeleccionado(entrada.id)" [(ngModel)]="usuario[entrada.id].city">
+      </div>
+      <div class="col col-4" data-label="Edad">
+        <input type="number" name="edad{{entrada.id}}" value="{{(entrada.age!=null)?entrada.age:''}}" (blur)="onUsuarioSeleccionado(entrada.id)" [(ngModel)]="usuario[entrada.id].age">
+      </div>
+      <div class="col col-5">
+        <div  (click)="onUsuarioEliminado(entrada.id)"><span class="material-icons">delete</span></div>
+      </div>
+      <input type="number" class="numeroExtraño" [(ngModel)]="usuario[entrada.id].id" value="{{entrada.id}}" hidden>
+    </li>
 
+  </ul>
+</div>

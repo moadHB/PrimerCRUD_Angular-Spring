@@ -1,8 +1,15 @@
 
 h1{
   color:  #377D8D;
-  text-align: center;
-  height: 50px;
+  text-align: left;
+  min-height: 50px;
+  font-size:40px;
+  margin: 20px 0;
+  display: flex;
+
+}
+hr{
+  margin-top: auto;
 }
 
 

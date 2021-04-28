@@ -1,114 +1,87 @@
-.boton{
-  background-color:#FF5555;
-  float:right;
-  padding: 5px 7px;
-}
-input{
-  background-color: #C6C9C8 ;
-  padding: 5px 10px;
-}
-.card {
-  background-color: #192824;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  padding: 15px;
-  margin: 0 0 40px 70px;
-  border: 3px solid #555BFF;
-  box-shadow: 10px -10px 0 -3px #192824, 10px -10px #1FC11B,
-        20px -20px 0 -3px #192824, 20px -20px #FFD913,
-        30px -30px 0 -3px #192824, 30px -30px #FF9C55,
-        40px -40px 0 -3px #192824, 40px -40px #FF5555;
-
-  transition: box-shadow 1s, top 1s, left 1s;
-  position: relative;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-  animation: shadow-wave 1s ease infinite;
-  color: #E2E4E4;
-  display: flexbox;
-  font-size: larger;
-  font-family:'Lucida Grande';
-}
-
-
-
-@keyframes shadow-wave {
-  0% {
-    border: 3px solid #555BFF;
-    box-shadow: 10px -10px 0 -3px #192824, 10px -10px #1FC11B,
-      20px -20px 0 -3px #192824, 20px -20px #FFD913,
-      30px -30px 0 -3px #192824, 30px -30px #FF9C55,
-      40px -40px 0 -3px #192824, 40px -40px #FF5555;
-  }
-  20% {
-    border: 3px solid #FF5555;
-    box-shadow: 10px -10px 0 -3px #192824, 10px -10px #555BFF,
-      20px -20px 0 -3px #192824, 20px -20px #1FC11B,
-      30px -30px 0 -3px #192824, 30px -30px #FFD913,
-      40px -40px 0 -3px #192824, 40px -40px #FF9C55;
-  }
-  40% {
-    border: 3px solid #FF9C55;
-    box-shadow: 10px -10px 0 -3px #192824, 10px -10px #FF5555,
-      20px -20px 0 -3px #192824, 20px -20px #555BFF,
-      30px -30px 0 -3px #192824, 30px -30px #1FC11B,
-      40px -40px 0 -3px #192824, 40px -40px #FFD913;
-  }
-  60% {
-    border: 3px solid #FFD913;
-    box-shadow: 10px -10px 0 -3px #192824, 10px -10px #FF9C55,
-      20px -20px 0 -3px #192824, 20px -20px #FF5555,
-      30px -30px 0 -3px #192824, 30px -30px #555BFF,
-      40px -40px 0 -3px #192824, 40px -40px #1FC11B;
-  }
-  80% {
-    border: 3px solid #1FC11B;
-    box-shadow: 10px -10px 0 -3px #192824, 10px -10px #FFD913,
-      20px -20px 0 -3px #192824, 20px -20px #FF9C55,
-      30px -30px 0 -3px #192824, 30px -30px #FF5555,
-      40px -40px 0 -3px #192824, 40px -40px #555BFF;
-  }
-  100% {
-    border: 3px solid #555BFF;
-    box-shadow: 10px -10px 0 -3px #192824, 10px -10px #1FC11B,
-      20px -20px 0 -3px #192824, 20px -20px #FFD913,
-      30px -30px 0 -3px #192824, 30px -30px #FF9C55,
-      40px -40px 0 -3px #192824, 40px -40px #FF5555;
-  }
-
-}
-
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 body {
-  background-image: radial-gradient(#22D2A0 30%, #192824 30%);
-  background-size: 2px 3px;
-  color: #555BFF;
+  font-family: 'lato', sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.card label {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
 }
 
 
-#entrada{
-  width: 300px;
-  height: 200px;
-  margin: 70px 20px;
-  padding: 20px;
-  float:left;
+  .responsive-table li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .responsive-table .table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .responsive-table .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }
+  .responsive-table .col-1 {
+    flex-basis: 22.5%;
+  }
+  .responsive-table .col-2 {
+    flex-basis: 22.5%;
+  }
+  .responsive-table .col-3 {
+    flex-basis: 22.5%;
+  }
+  .responsive-table .col-4 {
+    flex-basis: 22.5%;
+  }
+  .responsive-table .col-5 {
+    flex-basis: 10%;
+  }
+  .responsive-table input{
+    max-width: 100px;
+    border-style: none;
 
-}
+  }
+  .responsive-table input:hover{
+    border-bottom: 1px solid #6C7A89;
+  }
 
+
+  @media all and (max-width: 810px) {
+    .responsive-table .table-header {
+      display: none;
+    }
+
+    .responsive-table li {
+      display: block;
+    }
+    .responsive-table .col {
+
+      flex-basis: 100%;
+      display: flex;
+      padding: 10px 0;
+    }
+
+
+    .responsive-table .col::before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+  }
 
 
 

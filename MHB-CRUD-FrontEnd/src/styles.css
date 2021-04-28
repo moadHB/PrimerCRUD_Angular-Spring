@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-  background-color: #192824 ;
+  background-color:#F5F7FA;
   width: 90%;
   overflow-y: scroll;
   overflow-x: hidden;
+  font-family: 'lato', sans-serif;
 }
 *{
   box-sizing: border-box;
